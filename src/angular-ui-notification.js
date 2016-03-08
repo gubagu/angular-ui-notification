@@ -55,6 +55,7 @@ angular.module('ui-notification').provider('Notification', function() {
                 scope.delay = args.delay;
                 scope.data = args.data;
 
+
                 var reposite = function() {
                     var j = 0;
                     var k = 0;
