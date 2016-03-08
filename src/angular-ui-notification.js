@@ -81,7 +81,7 @@ angular.module('ui-notification').provider('Notification', function() {
                         var right = lastRight + (k * (horizontalSpacing + elWidth));
 
                         element.css(element._positionY, top + 'px');
-                        if (element._positionX == 'center') {
+                        if (element._positionX === 'center') {
                             element.css('left', parseInt(window.innerWidth / 2 - elWidth / 2) + 'px');
                         } else {
                             element.css(element._positionX, right + 'px');
@@ -131,7 +131,7 @@ angular.module('ui-notification').provider('Notification', function() {
                 $timeout(reposite);
 
                 if (!isResizeBound) {
-                    angular.element($window).bind('resize', function(e) {
+                    angular.element($window).bind('resize', function() {
                         $timeout(reposite);
                     });
                     isResizeBound = true;
